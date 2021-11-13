@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>vueTest</title>
+</head>
+<body>
+    <header>
+        <h1>HYUNDAI</h1>
+    </header>
+    <main id="app">
+        <!-- this is where our dynamic data will go -->
+        <section>
+            <thumb 
+            v-on:showdata="popLightBox"
+            v-for="item in carData" 
+            :piece="item" 
+            :key="item.id">
+            </thumb>
+        </section>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="js/main.js" type="module" defer></script>
+</body>
+</html>
